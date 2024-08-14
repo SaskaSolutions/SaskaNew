@@ -10,31 +10,31 @@ export const HoverImageLinks = () => {
                 <Link
                     heading="Bethmar.co"
                     subheading="A Telecom, Infrastructure and Construction Company"
-                    imgSrc="/imgs/random/11.jpg"
+                    imgSrc="https://picsum.photos/1024/1600"
                     href="#"
                 />
                 <Link
                     heading="Link-List"
                     subheading="A Web based application for Lists"
-                    imgSrc="/imgs/random/6.jpg"
+                    imgSrc="https://picsum.photos/1200/2400"
                     href="#"
                 />
                 <Link
                     heading="Emaan.LMS.edu"
                     subheading="A complete Learning Management System"
-                    imgSrc="/imgs/random/4.jpg"
+                    imgSrc="https://picsum.photos/2400/1200"
                     href="#"
                 />
                 <Link
                     heading="StockManager.com"
                     subheading="A web based stock management system"
-                    imgSrc="/imgs/random/5.jpg"
+                    imgSrc="https://picsum.photos/1600/1024"
                     href="#"
                 />
                 <Link
                     heading="TaskTracker.init"
                     subheading="A web based task tracker"
-                    imgSrc="/imgs/random/10.jpg"
+                    imgSrc="https://picsum.photos/1624/1224"
                     href="#"
                 />
             </div>
