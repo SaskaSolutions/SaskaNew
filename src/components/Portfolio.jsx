@@ -4,41 +4,49 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
     return (
-        <section className="bg-neutral-950 p-4 md:p-8">
-            <h1 className="text-center text-7xl text-white font-bold font-DM">Portfolio</h1>
-            <div className="mx-auto max-w-[1600px]">
-                <Link
-                    heading="Bethmar.co"
-                    subheading="A Telecom, Infrastructure and Construction Company"
-                    imgSrc="https://picsum.photos/1024/1600"
-                    href="#"
-                />
-                <Link
-                    heading="Link-List"
-                    subheading="A Web based application for Lists"
-                    imgSrc="https://picsum.photos/1200/2400"
-                    href="#"
-                />
-                <Link
-                    heading="Emaan.LMS.edu"
-                    subheading="A complete Learning Management System"
-                    imgSrc="https://picsum.photos/2400/1200"
-                    href="#"
-                />
-                <Link
-                    heading="StockManager.com"
-                    subheading="A web based stock management system"
-                    imgSrc="https://picsum.photos/1600/1024"
-                    href="#"
-                />
-                <Link
-                    heading="TaskTracker.init"
-                    subheading="A web based task tracker"
-                    imgSrc="https://picsum.photos/1624/1224"
-                    href="#"
-                />
-            </div>
-        </section>
+        <div className="bg-neutral-950 relative">
+            <section className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
+                <h1 className="text-center text-7xl text-white font-bold font-DM ">Portfolio</h1>
+                <div className="mx-auto max-w-[1600px] ">
+                    <Link
+                        heading="Bethmar.co"
+                        subheading="A Telecom, Infrastructure and Construction Company"
+                        imgSrc="https://picsum.photos/1024/1600"
+                        href="#"
+                    />
+                    <Link
+                        heading="Link-List"
+                        subheading="A Web based application for Lists"
+                        imgSrc="https://picsum.photos/1200/2400"
+                        href="#"
+                    />
+                    <Link
+                        heading="Emaan.LMS.edu"
+                        subheading="A complete Learning Management System"
+                        imgSrc="https://picsum.photos/2400/1200"
+                        href="#"
+                    />
+                    <Link
+                        heading="StockManager.com"
+                        subheading="A web based stock management system"
+                        imgSrc="https://picsum.photos/1600/1024"
+                        href="#"
+                    />
+                    <Link
+                        heading="TaskTracker.init"
+                        subheading="A web based task tracker"
+                        imgSrc="https://picsum.photos/1624/1224"
+                        href="#"
+                    />
+                </div>
+                <div className="absolute top-10 left-52">
+                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
+                </div>
+                <div className="absolute bottom-1/4 right-80">
+                    <div className="w-28 h-28 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full filter blur-xl opacity-50"></div>
+                </div>
+            </section>
+        </div>
     );
 };
 
@@ -77,7 +85,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             onMouseMove={handleMouseMove}
             initial="initial"
             whileHover="whileHover"
-            className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+            className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8 "
         >
             <div>
                 <motion.span
@@ -140,7 +148,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
                     },
                 }}
                 transition={{ type: "spring" }}
-                className="relative z-10 p-4"
+                className="relative z-10 lg:p-4"
             >
                 <FiArrowRight className="text-5xl text-neutral-50" />
             </motion.div>
