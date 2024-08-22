@@ -29,7 +29,7 @@ const CallToAction = () => {
                 <p className="text-xl mb-10">
                     Pioneering web solutions that turn your vision into reality.
                 </p>
-                <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-10 py-4 rounded-full font-bold text-lg transform transition-transform hover:scale-110">
+                <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-10 py-3 rounded-full font-medium text-lg transform transition-transform hover:scale-110">
                     Discover the Future with SASKA
                 </button>
             </div>

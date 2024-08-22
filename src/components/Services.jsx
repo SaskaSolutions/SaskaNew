@@ -12,7 +12,7 @@ const Services = () => {
     });
 
     return (
-        <div className=' bg-gray-200'>
+        <div className='bg-gradient-to-b from-black to-zinc-950'>
             <div className='mx-auto max-w-[1600px]'>
                 <div className='relative'>
                     <div ref={textRef} className='relative inset-0 w-6/12 mx-auto'>

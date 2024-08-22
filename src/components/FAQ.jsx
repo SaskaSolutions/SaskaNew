@@ -46,7 +46,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
             className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
             onClick={onClick}
         >
-            <span className="text-lg font-medium text-neutral-100/90">{question}</span>
+            <span className="text-2xl font-medium text-neutral-100/90">{question}</span>
             <motion.span
                 animate={isOpen ? { rotate: 0 } : { rotate: 180 }}
                 transition={{ duration: 0.3 }}
@@ -68,9 +68,9 @@ const FAQ = () => {
     };
 
     return (
-        <div className='bg-zinc-900 relative'>
+        <div className='bg-gradient-to-b from-neutral-950 via-gray-950 to-black pt-6 relative'>
             <div className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <h2 className="text-4xl font-bold md:text-5xl font-DM mb-4 text-neutral-100/90 mx-auto text-center max-w-lg">Frequently Asked Questions</h2>
+                <h2 className="text-center text-7xl text-white font-bold font-DM  max-w-xl mx-auto">Frequently Asked Questions</h2>
                 {faqData.map((item, index) => (
                     <FAQItem
                         key={index}

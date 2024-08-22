@@ -5,16 +5,16 @@ import responsiveWebsite from '../assets/BouncyCard/ResponsiveWeb.png'
 
 const BouncyCards = () => {
   return (
-    <section className="mx-auto max-w-[1600px] px-4 py-12 text-slate-800">
+    <section className="mx-auto max-w-[1600px] px-4 py-12 text-slate-600 bg-gradient-to-b from-zinc-950 via-black to-gray-950">
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-lg text-4xl font-bold md:text-5xl font-DM">
           We have a solution for{" "}
-          <span className="text-slate-400 font-DM"> every business.</span>
+          <span className="text-slate-300 font-DM"> every business.</span>
         </h2>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="font-Poppins whitespace-nowrap rounded-lg bg-slate-900 px-4 py-2 font-medium text-white shadow-xl transition-colors hover:bg-slate-700"
+          className="font-Poppins whitespace-nowrap bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 px-10 py-3 rounded-full font-medium text-lg mt-4 text-white shadow-xl transform transition-transform hover:scale-110"
         >
           See All
         </motion.button>
@@ -61,7 +61,7 @@ const BounceCard = ({ className, children }) => {
   return (
     <motion.div
       whileHover={{ scale: 0.95, rotate: "-1deg" }}
-      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 ${className}`}
+      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a] p-8 ${className}`}
     >
       {children}
     </motion.div>
@@ -70,6 +70,6 @@ const BounceCard = ({ className, children }) => {
 
 const CardTitle = ({ children }) => {
   return (
-    <h3 className="font-Poppins mx-auto text-center text-3xl font-semibold">{children}</h3>
+    <h3 className="font-Poppins mx-auto text-center text-3xl font-semibold text-slate-200">{children}</h3>
   );
 };

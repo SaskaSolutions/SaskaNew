@@ -73,7 +73,7 @@ const Navbar = () => {
             </motion.div>
 
             {/* Navbar */}
-            <div className='w-full fixed top-0 z-[100] bg-slate-600 px-4 py-2'>
+            <div className='w-full fixed top-0 z-[100] bg-transparent px-4 py-2'>
                 <div className='max-w-[1600px] flex flex-row justify-between mx-auto items-center w-full'>
                     <div className='flex flex-row items-center gap-x-2'>
                         <img src="https://placehold.co/50" alt="Logo" className='size-14' />
