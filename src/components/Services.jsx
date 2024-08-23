@@ -13,16 +13,16 @@ const Services = () => {
 
     return (
         <div className='bg-gradient-to-b from-black to-zinc-950'>
-            <div className='mx-auto max-w-[1600px]'>
+            <div className='mx-auto max-w-[1600px] '>
                 <div className='relative'>
-                    <div ref={textRef} className='relative inset-0 w-6/12 mx-auto'>
+                    <div ref={textRef} className='relative inset-0 w-auto lg:w-6/12 mx-auto'>
                         <motion.h1
                             initial={{ x: 0, y: 0 }}
                             animate={inView ? { x: 3, y: -3, transition: { duration: 0.7, ease: "easeIn" } } : { x: 0, y: 0 }}
-                            className='absolute inset-0 z-[2] text-white text-center font-DM text-5xl font-bold pt-8'>
+                            className='absolute inset-0 z-[2] text-white text-center font-DM text-3xl lg:text-5xl font-bold pt-8'>
                             WHAT WE DO
                         </motion.h1>
-                        <h1 className='absolute inset-0 z-[1] text-center font-DM text-5xl font-bold pt-8 text-violet-700/20'>
+                        <h1 className='absolute inset-0 z-[1] text-center font-DM text-3xl lg:text-5xl font-bold pt-8 text-violet-700/20'>
                             WHAT WE DO
                         </h1>
                     </div>

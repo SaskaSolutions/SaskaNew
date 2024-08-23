@@ -6,7 +6,7 @@ export const HoverImageLinks = () => {
     return (
         <div className="bg-neutral-950 pt-6 relative">
             <section className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <h1 className="text-center text-7xl text-white font-bold font-DM ">Portfolio</h1>
+                <h1 className="text-center text-5xl lg:text-7xl text-white font-bold font-DM ">Portfolio</h1>
                 <div className="mx-auto max-w-[1600px] ">
                     <Link
                         heading="Bethmar.co"
@@ -42,7 +42,7 @@ export const HoverImageLinks = () => {
                 <div className="absolute top-10 left-52">
                     <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
                 </div>
-                <div className="absolute bottom-1/4 right-80">
+                <div className="absolute bottom-1/4 right-80 lg:block hidden">
                     <div className="w-28 h-28 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full filter blur-xl opacity-50"></div>
                 </div>
             </section>
@@ -98,7 +98,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
                         staggerChildren: 0.075,
                         delayChildren: 0.25,
                     }}
-                    className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
+                    className="relative z-10 block text-3xl lg:text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
                 >
                     {heading.split("").map((l, i) => (
                         <motion.span

@@ -23,14 +23,14 @@ const CallToAction = () => {
 
             {/* Content */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <h2 className="text-6xl font-extrabold mb-6">
+                <h2 className="text-4xl lg:text-6xl font-extrabold mb-6">
                     Innovation Meets Excellence
                 </h2>
-                <p className="text-xl mb-10">
+                <p className="text-lg lg:text-xl mb-10">
                     Pioneering web solutions that turn your vision into reality.
                 </p>
                 <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-10 py-3 rounded-full font-medium text-lg transform transition-transform hover:scale-110">
-                    Discover the Future with SASKA
+                    Discover the Future with us
                 </button>
             </div>
 

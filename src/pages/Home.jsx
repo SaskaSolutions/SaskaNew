@@ -7,18 +7,20 @@ import WorkStages from '../components/WorkStages'
 import { HoverImageLinks } from '../components/Portfolio'
 import FAQ from '../components/FAQ'
 import CallToAction from '../components/CallToAction'
+import Footer from '../components/Footer'
 
 const Home = () => {
     return (
-        <div className='relative'>
+        <div className='relative bg-black'>
             <Navbar />
             <Hero />
             <Services />
             <BouncyCards />
-            <WorkStages />
+            {/* <WorkStages /> */}
             <HoverImageLinks />
             <FAQ />
             <CallToAction />
+            <Footer />
         </div>
     )
 }

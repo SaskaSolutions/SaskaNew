@@ -46,7 +46,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
             className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
             onClick={onClick}
         >
-            <span className="text-2xl font-medium text-neutral-100/90">{question}</span>
+            <span className="text-lg lg:text-2xl font-medium text-neutral-100/90">{question}</span>
             <motion.span
                 animate={isOpen ? { rotate: 0 } : { rotate: 180 }}
                 transition={{ duration: 0.3 }}
@@ -70,7 +70,7 @@ const FAQ = () => {
     return (
         <div className='bg-gradient-to-b from-neutral-950 via-gray-950 to-black pt-6 relative'>
             <div className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <h2 className="text-center text-7xl text-white font-bold font-DM  max-w-xl mx-auto">Frequently Asked Questions</h2>
+                <h2 className="text-center text-5xl lg:text-7xl text-white font-bold font-DM  max-w-xl mx-auto">Frequently Asked Questions</h2>
                 {faqData.map((item, index) => (
                     <FAQItem
                         key={index}
@@ -83,7 +83,7 @@ const FAQ = () => {
                 <div className="absolute top-10 left-52">
                     <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
                 </div>
-                <div className="absolute bottom-52 right-24">
+                <div className="absolute bottom-52 right-24 lg:block hidden">
                     <div className="w-28 h-28 bg-gradient-to-r from-pink-500 to-red-500 rounded-full filter blur-xl opacity-50"></div>
                 </div>
             </div>
