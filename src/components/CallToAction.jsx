@@ -33,14 +33,16 @@ const CallToAction = () => {
                     Discover the Future with us
                 </button>
             </div>
+            <div className='max-w-[1600px]'>
+                {/* Parallax Floating Elements */}
+                <div className="absolute bottom-10 left-10">
+                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
+                </div>
+                <div className="absolute top-20 right-10">
+                    <div className="w-28 h-28 bg-gradient-to-r from-pink-500 to-red-500 rounded-full filter blur-xl opacity-50"></div>
+                </div>
+            </div>
 
-            {/* Parallax Floating Elements */}
-            <div className="absolute bottom-10 left-10">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
-            </div>
-            <div className="absolute top-20 right-10">
-                <div className="w-28 h-28 bg-gradient-to-r from-pink-500 to-red-500 rounded-full filter blur-xl opacity-50"></div>
-            </div>
         </section>
     );
 };
