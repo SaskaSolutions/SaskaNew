@@ -41,16 +41,16 @@ const faqData = [
 ];
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
-    <div className="border-b border-gray-300">
+    <div className="border-b border-gray-700">
         <button
             className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
             onClick={onClick}
         >
-            <span className="text-lg lg:text-2xl font-medium text-neutral-100/90">{question}</span>
+            <span className="text-lg lg:text-2xl font-medium text-gray-400">{question}</span>
             <motion.span
                 animate={isOpen ? { rotate: 0 } : { rotate: 180 }}
                 transition={{ duration: 0.3 }}
-            > < IoMdArrowDropdownCircle className='text-white p-2' size={50} /></motion.span>
+            > < IoMdArrowDropdownCircle className='text-gray-400 p-2' size={50} /></motion.span>
         </button>
         {isOpen && <motion.p
             initial={{ y: -100, opacity: 0 }}

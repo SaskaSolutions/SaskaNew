@@ -5,9 +5,9 @@ import responsiveWebsite from '../assets/BouncyCard/ResponsiveWeb.png'
 
 const BouncyCards = () => {
   return (
-    <section className="text-slate-600 bg-gradient-to-b from-zinc-950 via-black to-gray-950">
-      <div className="max-w-[1600px] p-4 mx-auto lg:p-8">
-        <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
+    <section className="text-slate-600 bg-gradient-to-b from-zinc-950 via-black to-gray-950 pt-8">
+      <div className="max-w-[1600px] p-4 mx-auto md:p-8">
+        <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="max-w-lg text-4xl font-bold md:text-5xl font-DM">
             We have a solution for{" "}
             <span className="text-slate-300 font-DM"> every business.</span>

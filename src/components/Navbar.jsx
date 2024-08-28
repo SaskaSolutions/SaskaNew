@@ -70,8 +70,8 @@ const Navbar = () => {
             </motion.div>
 
             {/* Navbar */}
-            <div className='w-full fixed top-0 z-[100] bg-gradient-to-b from-black to-slate-800/10 backdrop-blur-[2px] px-4 py-2 shadow-lg'>
-                <div className='max-w-[1600px] flex flex-row justify-between mx-auto items-center w-full'>
+            <div className='w-full fixed top-0 z-[100] backdrop-blur-[2px] px-4 py-4'>
+                <div className='max-w-[1600px] flex flex-row justify-between mx-auto  items-center w-full'>
                     <div className='flex flex-row items-center gap-x-2'>
                         <img src="https://placehold.co/50" alt="Logo" className='size-14' />
                         <p className='text-white text-2xl font-semibold tracking-wider'>SASKA Solutions</p>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <div className='hidden md:flex'>
-                        <ul className='flex flex-row gap-x-6 items-center text-white'>
+                        <ul className='flex flex-row gap-x-6 items-center text-white text-lg font-medium'>
                             {['Home', 'Services', 'Portfolio', 'FAQs'].map((item) => (
                                 <li key={item} className='relative group cursor-pointer px-4 py-2'>
                                     <span className='z-10'>{item}</span>
