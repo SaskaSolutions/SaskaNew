@@ -14,18 +14,31 @@ const Services = () => {
     return (
         <div className='bg-gradient-to-b from-black to-zinc-950 pt-12'>
             {/* <div className='mx-auto max-w-[1600px] '> */}
-            <div ref={textRef} className='relative w-8/12 mx-auto'>
-                <motion.h1
+            <div ref={textRef} className='relative w-8/12 mx-auto py-6'>
+                {/* <motion.h1
                     initial={{ x: 0, y: 0 }}
                     animate={inView ? { x: 3, y: -3, transition: { duration: 0.7, ease: "easeIn" } } : { x: 0, y: 0 }}
-                    className='absolute inset-0 z-[2] text-white text-center font-DM text-3xl lg:text-5xl font-bold'>
+                    className='absolute inset-0 z-[2] text-white text-center text-5xl lg:text-7xl font-bold font-DM '>
                     WHAT WE DO
-                </motion.h1>
-                <h1 className='absolute inset-0 z-[1] text-center font-DM text-3xl lg:text-5xl font-bold text-fuchsia-500/70'>
-                    WHAT WE DO
+                </motion.h1> */}
+                <h1 className='absolute inset-0 z-[1] text-center text-5xl lg:text-7xl font-bold font-DM  text-white'>
+                    What We Do
                 </h1>
             </div>
-            <div className='relative top-20'>
+            <div className="relative top-10 w-full mx-auto mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end px-8">
+                <h2 className="max-w-lg text-4xl font-bold md:text-5xl font-DM text-slate-700">
+                    We code like there's <br />{" "}
+                    <span className="text-slate-300 font-DM"> no bug tomorrow.</span>
+                </h2>
+                <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="font-Poppins whitespace-nowrap bg-gradient-to-r from-blue-500 via-sky-500 to-violet-500 px-10 py-3 rounded-full font-medium text-lg mt-4 text-white shadow-xl transform transition-transform hover:scale-110"
+                >
+                    Solutions
+                </motion.button>
+            </div>
+            <div className='relative'>
                 <div className='py-6'>
                     <TextParallax
                         imgUrl="https://plus.unsplash.com/premium_photo-1678565546661-bf43274dd428?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

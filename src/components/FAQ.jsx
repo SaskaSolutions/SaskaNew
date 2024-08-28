@@ -41,12 +41,12 @@ const faqData = [
 ];
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
-    <div className="border-b border-gray-700">
+    <div className="md:py-8 py-4 border-b border-gray-700 group hover:text-neutral-50 hover:border-neutral-50 transition-colors duration-500">
         <button
             className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
             onClick={onClick}
         >
-            <span className="text-lg lg:text-2xl font-medium text-gray-400">{question}</span>
+            <span className=" text-3xl lg:text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl">{question}</span>
             <motion.span
                 animate={isOpen ? { rotate: 0 } : { rotate: 180 }}
                 transition={{ duration: 0.3 }}
@@ -56,7 +56,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="px-4 pb-4 text-gray-400 overflow-hidden">{answer}</motion.p>}
+            className="pb-4 text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 overflow-hidden">{answer}</motion.p>}
     </div >
 );
 
