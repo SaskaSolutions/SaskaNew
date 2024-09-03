@@ -8,16 +8,16 @@ const Footer = () => {
                 <div className='flex flex-col justify-between'>
                     <div className='' >
                         <div className='items-center justify-around w-full mb-6 lg:mb-0 flex space-x-4'>
-                            <a href="#" className="bg-blue-600 p-3 rounded-full">
+                            <a href="#" className="bg-blue-600 p-3 rounded-full hover:animate-bounce">
                                 <FaFacebookF />
                             </a>
-                            <a href="#" className="bg-blue-600 p-3 rounded-full">
+                            <a href="#" className="bg-blue-600 p-3 rounded-full hover:animate-bounce ">
                                 <FaTwitter />
                             </a>
-                            <a href="#" className="bg-pink-600 p-3 rounded-full">
+                            <a href="#" className="bg-pink-600 p-3 rounded-full hover:animate-bounce ">
                                 <FaInstagram />
                             </a>
-                            <a href="#" className="bg-blue-600 p-3 rounded-full">
+                            <a href="#" className="bg-blue-600 p-3 rounded-full hover:animate-bounce ">
                                 <FaLinkedinIn />
                             </a>
                         </div>

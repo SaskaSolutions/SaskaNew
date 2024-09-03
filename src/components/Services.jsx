@@ -8,20 +8,19 @@ const Services = () => {
     const [textRef, inView] = useInView({
         threshold: 0.5,
         triggerOnce: false,
-        delay: 1000
+        delay: 400
     });
 
     return (
         <div className='bg-gradient-to-b from-black to-zinc-950 pt-12'>
-            {/* <div className='mx-auto max-w-[1600px] '> */}
             <div ref={textRef} className='relative w-8/12 mx-auto py-6'>
-                {/* <motion.h1
+                <motion.h1
                     initial={{ x: 0, y: 0 }}
-                    animate={inView ? { x: 3, y: -3, transition: { duration: 0.7, ease: "easeIn" } } : { x: 0, y: 0 }}
-                    className='absolute inset-0 z-[2] text-white text-center text-5xl lg:text-7xl font-bold font-DM '>
-                    WHAT WE DO
-                </motion.h1> */}
-                <h1 className='absolute inset-0 z-[1] text-center text-5xl lg:text-7xl font-bold font-DM  text-white'>
+                    animate={inView ? { x: 8, y: -10, transition: { duration: 0.5, ease: "easeIn" } } : { x: 0, y: 0 }}
+                    className='absolute inset-0 z-[1] text-center text-5xl lg:text-7xl font-bold font-DM  text-white'>
+                    What We Do
+                </motion.h1>
+                <h1 className='blur-sm absolute inset-0 z-[0] text-center text-5xl lg:text-7xl font-bold font-DM  text-neutral-600'>
                     What We Do
                 </h1>
             </div>
@@ -58,7 +57,6 @@ const Services = () => {
                 </div>
             </div>
         </div >
-        // </div >
     )
 }
 

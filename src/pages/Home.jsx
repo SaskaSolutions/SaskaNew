@@ -3,11 +3,12 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import BouncyCards from '../components/BouncyCards'
-import WorkStages from '../components/WorkStages'
 import { HoverImageLinks } from '../components/Portfolio'
 import FAQ from '../components/FAQ'
 import CallToAction from '../components/CallToAction'
 import Footer from '../components/Footer'
+import Design1 from '../assets/SVG/Design1.svg'
+import Design2 from '../assets/SVG/Design2.svg'
 
 const Home = () => {
     return (
@@ -15,11 +16,24 @@ const Home = () => {
             <Navbar />
             <Hero />
             <Services />
-            <BouncyCards />
-            {/* <WorkStages /> */}
-            <HoverImageLinks />
-            <FAQ />
-            <CallToAction />
+            <div className='relative z-[15] overflow-clip'>
+                <div className='absolute h-full w-full -z-0 '>
+                    <img src={Design1} alt="" className='w-full h-full object-cover opacity-50' />
+                </div>
+                <div className='z-10'>
+                    <BouncyCards />
+                    <HoverImageLinks />
+                </div>
+            </div>
+            <div className='relative z-[15] overflow-clip'>
+                <div className='absolute h-full w-full -z-0 '>
+                    <img src={Design2} alt="" className='w-full h-full object-cover rotate-[-25deg] opacity-50' />
+                </div>
+                <div className='z-10'>
+                    <FAQ />
+                    <CallToAction />
+                </div>
+            </div>
             <Footer />
         </div>
     )

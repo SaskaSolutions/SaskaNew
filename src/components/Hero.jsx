@@ -31,16 +31,15 @@ const Hero = () => {
         offset: ["start end", "end start"]
     });
 
-    // Adjusted movement ranges for less dramatic motion
-    const fastY = useTransform(scrollYProgress, [0, 1], [200, -600]); // Less dramatic movement
-    const slowY = useTransform(scrollYProgress, [0, 1], [-200, 300]); // Less dramatic movement
+    const fastY = useTransform(scrollYProgress, [0, 1], [200, -600]);
+    const slowY = useTransform(scrollYProgress, [0, 1], [-200, 300]);
     const exitScale = useTransform(scrollYProgress, [0.7, 1], [1, 0.7]);
     const exitOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
 
     return (
-        <div className='relative'>
-            <div className='h-[200vh] w-full bg-gradient-to-b from-black via-gray-900 to-black relative '>
-                <div ref={ref} className='w-full h-[200vh] relative max-w-[1600px] mx-auto'>
+        <section className='relative'>
+            <div className='h-[200vh] w-full bg-gradient-to-b from-gray-950 via-gray-950 to-black'>
+                <div ref={ref} className='w-full h-[200vh] relative max-w-[1600px] mx-auto overflow'>
                     <motion.div
                         initial="hide"
                         animate="show"
@@ -60,14 +59,14 @@ const Hero = () => {
                                 },
                             },
                         }}
-                        className='flex flex-col justify-center items-center sticky top-[20%] z-[7] px-5 max-w-2xl mx-auto'
+                        className='flex flex-col justify-center items-center sticky top-[20%] z-[7] px-5 mx-auto'
                     >
                         <motion.h1
                             variants={{
                                 show: { opacity: 1, y: 0 },
                                 hide: { opacity: 0, y: -50 },
                             }}
-                            className='text-white text-center font-DM text-4xl lg:text-5xl font-bold'
+                            className='text-center text-5xl lg:text-7xl font-bold font-DM  text-white max-w-2xl'
                         >
                             SASKA SOLUTIONS
                         </motion.h1>
@@ -76,7 +75,7 @@ const Hero = () => {
                                 show: { opacity: 1, y: 0 },
                                 hide: { opacity: 0, y: -50 },
                             }}
-                            className='text-white font-DM text-xs lg:text-base font-light text-center pt-8 pb-6'
+                            className='text-neutral-300 font-DM text-base font-extralight lg:text-xl text-center py-6 max-w-3xl'
                         >
                             Let us transform your digital landscape. Digital Path to your Success
                         </motion.p>
@@ -85,7 +84,7 @@ const Hero = () => {
                                 show: { opacity: 1, y: 0 },
                                 hide: { opacity: 0, y: -50 },
                             }}
-                            className='text-white text-center font-DM text-xl lg:text-3xl font-normal'
+                            className='text-center text-xl md:mb-2 md:text-3xl font-normal font-DM text-neutral-50 max-w-xl'
                         >
                             We bring together our design skills and strategic thinking to craft experiences your customers will never forget.
                         </motion.h2>
@@ -99,7 +98,7 @@ const Hero = () => {
                     </motion.div>
 
                     {/* Slow-moving squares */}
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[200px] h-[125px] md:w-[400px] md:h-[250px] absolute bottom-[20%] lg:bottom-[30%] right-[10%] z-[5] opacity-60' style={{ y: slowY }} >
+                    <motion.div className='shadow-md shadow-violet-700/10 w-[200px] h-[125px] md:w-[400px] md:h-[250px] absolute bottom-[35%] lg:bottom-[30%] right-[20%] lg:right-[10%] z-[5] opacity-60' style={{ y: slowY }} >
                         <img src="https://plus.unsplash.com/premium_photo-1683140655656-20448abc55da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
                     </motion.div>
                     <motion.div className='shadow-md shadow-violet-700/10 w-[200px] h-[125px] md:w-[400px] md:h-[250px] absolute bottom-[50%] lg:bottom-[30%] left-[5%] z-[5] opacity-60' style={{ y: slowY }} >
@@ -120,17 +119,14 @@ const Hero = () => {
                         <img src="https://images.unsplash.com/photo-1668554245893-2430d0077217?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
                     </motion.div>
                 </div>
-                <div className="absolute top-24 left-24">
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
-                </div>
-                <div className="absolute bottom-24 right-24">
-                    <div className="w-24 h-24 bg-gradient-to-r from-pink-500 to-red-500 rounded-full filter blur-xl opacity-50"></div>
-                </div>
-                <div className="absolute bottom-2/4 left-2/4">
-                    <div className="w-32 h-32 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full filter blur-xl opacity-50"></div>
-                </div>
             </div>
-        </div>
+            <div className='border size-40 absolute top-20 left-20 rounded-full bg-gradient-to-r from-purple-600/60 to-indigo-600/60 blur-2xl'>
+            </div>
+            <div className='border size-36 absolute top-[50%] left-[45%] rounded-full bg-gradient-to-r from-sky-600/40 to-blue-600/40 blur-2xl'>
+            </div>
+            <div className='border size-36 absolute top-[85%] left-[80%] rounded-full bg-gradient-to-r from-fuchsia-600/40 to-pink-600/40 blur-2xl'>
+            </div>
+        </section>
     );
 };
 

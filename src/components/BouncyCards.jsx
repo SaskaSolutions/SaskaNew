@@ -162,6 +162,7 @@
 
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer'
 import customSoftware from '../assets/BouncyCard/CustomSoftware.png';
 import responsiveWebsite from '../assets/BouncyCard/ResponsiveWeb.png';
 import Carousel3d from "./Carousel3d";
@@ -213,9 +214,26 @@ const BouncyCards = () => {
     }
   };
 
+  const [textRef, inView] = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+    delay: 1000
+  });
+
   return (
     <section className="text-slate-600 bg-gradient-to-b from-zinc-950 via-black to-gray-950 pt-8">
       <div className="max-w-[1600px] p-4 mx-auto md:p-8">
+        <div ref={textRef} className='relative w-8/12 mx-auto py-6'>
+          <motion.h1
+            initial={{ x: 0, y: 0 }}
+            animate={inView ? { x: 8, y: -10, transition: { duration: 0.5, ease: "easeIn" } } : { x: 0, y: 0 }}
+            className='absolute inset-0 z-[1] text-center text-5xl lg:text-7xl font-bold font-DM  text-white'>
+            Portfolio
+          </motion.h1>
+          <h1 className='blur-sm absolute inset-0 z-[0] text-center text-5xl lg:text-7xl font-bold font-DM  text-neutral-600'>
+            Portfolio
+          </h1>
+        </div>
         <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="max-w-lg text-4xl font-bold md:text-5xl font-DM">
             We have a solution for{" "}

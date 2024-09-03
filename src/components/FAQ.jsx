@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer'
 import { IoMdArrowDropdownCircle } from 'react-icons/io';
 
 const faqData = [
@@ -46,7 +47,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
             className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
             onClick={onClick}
         >
-            <span className=" text-3xl lg:text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl">{question}</span>
+            <span className="text-3xl lg:text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">{question}</span>
             <motion.span
                 animate={isOpen ? { rotate: 0 } : { rotate: 180 }}
                 transition={{ duration: 0.3 }}
@@ -67,24 +68,36 @@ const FAQ = () => {
         setOpenIndex(index === openIndex ? null : index);
     };
 
+    const [textRef, inView] = useInView({
+        threshold: 0.5,
+        triggerOnce: false,
+        delay: 1000
+    });
+
     return (
-        <div className='bg-gradient-to-b from-neutral-950 via-gray-950 to-black pt-6 relative'>
+        <div className='bg-gradient-to-b from-neutral-950 via-gray-950 to-black pt-6'>
             <div className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <h2 className="text-center text-5xl lg:text-7xl text-white font-bold font-DM  max-w-xl mx-auto">Frequently Asked Questions</h2>
-                {faqData.map((item, index) => (
-                    <FAQItem
-                        key={index}
-                        question={item.question}
-                        answer={item.answer}
-                        isOpen={index === openIndex}
-                        onClick={() => toggleFAQ(index)}
-                    />
-                ))}
-                <div className="absolute top-10 left-52">
-                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
+                <div ref={textRef} className='relative max-w-xl mx-auto'>
+                    <motion.h1
+                        initial={{ x: 0, y: 0 }}
+                        animate={inView ? { x: 8, y: -10, transition: { duration: 0.5, ease: "easeIn" } } : { x: 0, y: 0 }}
+                        className='absolute inset-0 z-[1] text-center text-5xl lg:text-7xl font-bold font-DM  text-white'>
+                        Frequently Asked Questions
+                    </motion.h1>
+                    <h1 className='blur-sm absolute inset-0 z-[0] text-center text-5xl lg:text-7xl font-bold font-DM  text-neutral-600'>
+                        Frequently Asked Questions
+                    </h1>
                 </div>
-                <div className="absolute bottom-52 right-24 lg:block hidden">
-                    <div className="w-28 h-28 bg-gradient-to-r from-pink-500 to-red-500 rounded-full filter blur-xl opacity-50"></div>
+                <div className='pt-[160px]'>
+                    {faqData.map((item, index) => (
+                        <FAQItem
+                            key={index}
+                            question={item.question}
+                            answer={item.answer}
+                            isOpen={index === openIndex}
+                            onClick={() => toggleFAQ(index)}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

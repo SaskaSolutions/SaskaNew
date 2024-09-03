@@ -4,9 +4,8 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
     return (
-        <div className="bg-gradient-to-b from-gray-950 via-black to-neutral-950 pt-6 relative">
+        <div className="bg-gradient-to-b from-gray-950 via-black to-neutral-950 pt-6 ">
             <section className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <h1 className="text-center text-5xl lg:text-7xl text-white font-bold font-DM ">Portfolio</h1>
                 <div className="mx-auto max-w-[1600px] ">
                     <Link
                         heading="Bethmar.co"
@@ -38,12 +37,6 @@ export const HoverImageLinks = () => {
                         imgSrc="https://picsum.photos/1624/1224"
                         href="#"
                     />
-                </div>
-                <div className="absolute top-10 left-52">
-                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full filter blur-xl opacity-50"></div>
-                </div>
-                <div className="absolute bottom-1/4 right-80 lg:block hidden">
-                    <div className="w-28 h-28 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full filter blur-xl opacity-50"></div>
                 </div>
             </section>
         </div>
