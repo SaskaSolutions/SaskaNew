@@ -29,13 +29,13 @@ const Services = () => {
                     We code like there's <br />{" "}
                     <span className="text-slate-300 font-DM"> no bug tomorrow.</span>
                 </h2>
-                <motion.button
+                {/* <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="font-Poppins whitespace-nowrap bg-gradient-to-r from-blue-500 via-sky-500 to-violet-500 px-10 py-3 rounded-full font-medium text-lg mt-4 text-white shadow-xl transform transition-transform hover:scale-110"
                 >
                     Solutions
-                </motion.button>
+                </motion.button> */}
             </div>
             <div className='relative'>
                 <div className='py-6'>

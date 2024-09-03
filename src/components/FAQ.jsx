@@ -42,7 +42,7 @@ const faqData = [
 ];
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
-    <div className="md:py-8 py-4 border-b border-gray-700 group hover:text-neutral-50 hover:border-neutral-50 transition-colors duration-500">
+    <div className="cursor-pointer  md:py-8 py-4 border-b border-gray-700 group hover:text-neutral-50 hover:border-neutral-50 transition-colors duration-500">
         <button
             className="w-full text-left py-4 focus:outline-none flex justify-between items-center"
             onClick={onClick}
@@ -76,8 +76,8 @@ const FAQ = () => {
 
     return (
         <div className='bg-gradient-to-b from-neutral-950 via-gray-950 to-black pt-6'>
-            <div className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <div ref={textRef} className='relative max-w-xl mx-auto'>
+            <div className="relative max-w-[1600px] p-4 mx-auto lg:p-8 ">
+                <div ref={textRef} className='relative max-w-xl mx-auto z-[15]'>
                     <motion.h1
                         initial={{ x: 0, y: 0 }}
                         animate={inView ? { x: 8, y: -10, transition: { duration: 0.5, ease: "easeIn" } } : { x: 0, y: 0 }}
@@ -100,6 +100,11 @@ const FAQ = () => {
                     ))}
                 </div>
             </div>
+            <div className='absolute z-[1] top-14 left-[20%] size-36 rounded-full bg-gradient-to-r from-violet-600/40 to-purple-600/40 blur-xl'></div>
+            <div className='absolute z-[1] top-[30%] left-[75%] size-24 rounded-full bg-gradient-to-r from-pink-600/40 to-fuchsia-600/40 blur-xl'></div>
+            <div className='absolute z-[1] top-[70%] left-[85%] size-44 rounded-full bg-gradient-to-r from-pink-600/40 to-fuchsia-600/40 blur-xl'></div>
+            <div className='absolute z-[1] top-[85%] left-[65%] size-20 rounded-full bg-gradient-to-r from-pink-600/40 to-fuchsia-600/40 blur-xl'></div>
+            <div className='absolute z-[1] top-[90%] left-[10%] size-28 rounded-full bg-gradient-to-r from-violet-600/40 to-purple-600/40 blur-xl'></div>
         </div>
     );
 };

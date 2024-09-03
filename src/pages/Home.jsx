@@ -9,6 +9,7 @@ import CallToAction from '../components/CallToAction'
 import Footer from '../components/Footer'
 import Design1 from '../assets/SVG/Design1.svg'
 import Design2 from '../assets/SVG/Design2.svg'
+import Contact from '../components/Contact.jsx'
 
 const Home = () => {
     return (
@@ -34,6 +35,7 @@ const Home = () => {
                     <CallToAction />
                 </div>
             </div>
+            <Contact />
             <Footer />
         </div>
     )

@@ -37,7 +37,7 @@ const Hero = () => {
     const exitOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
 
     return (
-        <section className='relative'>
+        <section className='relative overflow-clip'>
             <div className='h-[200vh] w-full bg-gradient-to-b from-gray-950 via-gray-950 to-black'>
                 <div ref={ref} className='w-full h-[200vh] relative max-w-[1600px] mx-auto overflow'>
                     <motion.div
@@ -84,14 +84,15 @@ const Hero = () => {
                                 show: { opacity: 1, y: 0 },
                                 hide: { opacity: 0, y: -50 },
                             }}
-                            className='text-center text-xl md:mb-2 md:text-3xl font-normal font-DM text-neutral-50 max-w-xl'
+                            className='text-center text-xl mb-2 md:text-3xl font-normal font-DM text-neutral-50 max-w-xl'
                         >
                             We bring together our design skills and strategic thinking to craft experiences your customers will never forget.
                         </motion.h2>
                         <motion.button
+                            className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-10 py-3 rounded-full font-medium text-lg"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="font-Poppins whitespace-nowrap bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 px-10 py-3 rounded-full font-medium text-lg mt-4 text-white shadow-xl transform transition-transform hover:scale-110"
+                            transition={{ duration: 0.2 }}
                         >
                             Get Started
                         </motion.button>

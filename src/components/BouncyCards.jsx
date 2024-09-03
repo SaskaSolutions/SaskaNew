@@ -221,9 +221,9 @@ const BouncyCards = () => {
   });
 
   return (
-    <section className="text-slate-600 bg-gradient-to-b from-zinc-950 via-black to-gray-950 pt-8">
-      <div className="max-w-[1600px] p-4 mx-auto md:p-8">
-        <div ref={textRef} className='relative w-8/12 mx-auto py-6'>
+    <section className=" text-slate-600 bg-gradient-to-b from-zinc-950 via-black to-gray-950 pt-8">
+      <div className="relative max-w-[1600px] p-4 mx-auto md:p-8">
+        <div ref={textRef} className='w-8/12 mx-auto py-6 relative'>
           <motion.h1
             initial={{ x: 0, y: 0 }}
             animate={inView ? { x: 8, y: -10, transition: { duration: 0.5, ease: "easeIn" } } : { x: 0, y: 0 }}
@@ -234,20 +234,20 @@ const BouncyCards = () => {
             Portfolio
           </h1>
         </div>
-        <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+        <div className="relative mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <h2 className="max-w-lg text-4xl font-bold md:text-5xl font-DM">
             We have a solution for{" "}
             <span className="text-slate-300 font-DM"> every business.</span>
           </h2>
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="font-Poppins whitespace-nowrap bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 px-10 py-3 rounded-full font-medium text-lg mt-4 text-white shadow-xl transform transition-transform hover:scale-110"
           >
             See All
-          </motion.button>
+          </motion.button> */}
         </div>
-        <div className="mb-4 grid grid-cols-12 gap-4">
+        <div className="relative mb-4 grid grid-cols-12 gap-4 z-20">
           <div
             className={`col-span-12 md:col-span-4`}
             onClick={() => handleSetImages(cardImg, 0)}
@@ -271,7 +271,7 @@ const BouncyCards = () => {
             </BounceCard>
           </div>
         </div>
-        <div className='flex h-auto w-full relative'>
+        <div className='flex h-auto w-full relative z-20'>
           <AnimatePresence>
             {images && (
               <motion.div
@@ -287,7 +287,7 @@ const BouncyCards = () => {
             )}
           </AnimatePresence>
         </div>
-        <div className="grid grid-cols-12 gap-4">
+        <div className="relative grid grid-cols-12 gap-4 z-20">
           <div
             className="col-span-12 md:col-span-6"
             onClick={() => handleSetImages(cardImg2, 2)}
@@ -316,6 +316,10 @@ const BouncyCards = () => {
           </div>
         </div>
       </div>
+      <div className="absolute blur-3xl size-[600px] left-[-15%] top-[22%] bg-blue-600/10 rounded-full z-[0]"></div>
+      <div className="absolute size-28 blur-lg left-[15%] top-[30%] bg-gradient-to-r from-purple-600 to-pink-600 rounded-full z-[0]"></div>
+      <div className="absolute size-40 blur-2xl left-[85%] top-[40%] bg-gradient-to-r from-sky-600 to-blue-600 rounded-full z-[0]"></div>
+      <div className="absolute size-36 blur-3xl left-[80%] top-[85%] bg-gradient-to-r from-sky-600 to-blue-600 rounded-full z-[0]"></div>
     </section>
   );
 };
