@@ -4,7 +4,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
     return (
-        <div className="bg-gradient-to-b from-gray-950 via-black to-neutral-950 pt-6 ">
+        <div className="bg-gradient-to-b from-neutral-950 via-black to-neutral-950 pt-6 ">
             <section className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
                 <div className="mx-auto max-w-[1600px] ">
                     <Link

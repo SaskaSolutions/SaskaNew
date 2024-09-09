@@ -75,20 +75,20 @@ const FAQ = () => {
     });
 
     return (
-        <div className='bg-gradient-to-b from-neutral-950 via-gray-950 to-black pt-6'>
+        <div id='faqs' className='bg-neutral-950 pt-6'>
             <div className="relative max-w-[1600px] p-4 mx-auto lg:p-8 ">
-                <div ref={textRef} className='relative max-w-xl mx-auto z-[15]'>
+                <div ref={textRef} className='relative max-w-xl mx-auto z-[15] py-6'>
                     <motion.h1
                         initial={{ x: 0, y: 0 }}
                         animate={inView ? { x: 8, y: -10, transition: { duration: 0.5, ease: "easeIn" } } : { x: 0, y: 0 }}
-                        className='absolute inset-0 z-[1] text-center text-5xl lg:text-7xl font-bold font-DM  text-white'>
+                        className='absolute inset-0 z-[1] text-center text-4xl lg:text-7xl font-bold font-DM  text-white'>
                         Frequently Asked Questions
                     </motion.h1>
-                    <h1 className='blur-sm absolute inset-0 z-[0] text-center text-5xl lg:text-7xl font-bold font-DM  text-neutral-600'>
+                    <h1 className='blur-sm absolute inset-0 z-[0] text-center text-4xl lg:text-7xl font-bold font-DM  text-neutral-600'>
                         Frequently Asked Questions
                     </h1>
                 </div>
-                <div className='pt-[160px]'>
+                <div className='pt-[50px] md:pt-[160px]'>
                     {faqData.map((item, index) => (
                         <FAQItem
                             key={index}

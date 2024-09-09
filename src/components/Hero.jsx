@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
 
@@ -37,8 +38,8 @@ const Hero = () => {
     const exitOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
 
     return (
-        <section className='relative overflow-clip'>
-            <div className='h-[200vh] w-full bg-gradient-to-b from-gray-950 via-gray-950 to-black'>
+        <section id='home' className='relative overflow-clip'>
+            <div className='h-[200vh] w-full bg-gradient-to-b from-black via-neutral-950 to-neutral-950'>
                 <div ref={ref} className='w-full h-[200vh] relative max-w-[1600px] mx-auto overflow'>
                     <motion.div
                         initial="hide"
@@ -94,7 +95,9 @@ const Hero = () => {
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                         >
-                            Get Started
+                            <Link to={"services"} smooth={true} duration={1500}>
+                                Get Started
+                            </Link>
                         </motion.button>
                     </motion.div>
 
