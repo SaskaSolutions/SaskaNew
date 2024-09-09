@@ -63,7 +63,7 @@ const Navbar = () => {
                     <motion.h1
                         key={item}
                         variants={linkVariants}
-                        className='text-white text-6xl font-bold p-4 cursor-pointer w-full border'
+                        className='text-white text-6xl font-bold p-4 cursor-pointer w-full'
                     >
                         <Link onClick={handleClick} to={item.toLowerCase()} smooth={true} duration={600}>
                             {item}
