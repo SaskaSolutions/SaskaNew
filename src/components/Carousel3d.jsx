@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Blurhash } from 'react-blurhash';
+import saska from '../assets/Saska.png'
 
-const Carousel3d = ({ images = [], radius = 500, duration = 20, width = 200, height = 250 }) => {
+const Carousel3d = ({ images = [], radius = 500, duration = 25, width = 200, height = 250 }) => {
     const totalCards = images.length;
 
     // Placeholder function to generate a Blurhash. 
@@ -22,8 +23,8 @@ const Carousel3d = ({ images = [], radius = 500, duration = 20, width = 200, hei
                     transformStyle: 'preserve-3d',
                     transform: `perspective(1000px) rotateX(-15deg)`,
                 }}
-                initial={{ rotateY: 0, rotateX: -5 }}
-                animate={{ rotateY: 360, rotateX: -5 }}
+                initial={{ rotateY: 0, rotateX: -6 }}
+                animate={{ rotateY: 360, rotateX: -6 }}
                 transition={{ duration: duration, ease: 'linear', repeat: Infinity }}
             >
                 {images.map((img, index) => {
@@ -61,6 +62,9 @@ const Carousel3d = ({ images = [], radius = 500, duration = 20, width = 200, hei
                         </motion.div>
                     );
                 })}
+                <div className='backdrop-blur-sm rounded-lg shadow-lg absolute p-2 bg-black bg-opacity-40 top-0 left-0 w-[250px] h-[300px]'>
+                    <img src={saska} alt="" className='w-full h-full object-cover' />
+                </div>
             </motion.div>
         </section>
     );

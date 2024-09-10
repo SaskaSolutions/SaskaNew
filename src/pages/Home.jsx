@@ -19,7 +19,7 @@ const Home = () => {
             <Services />
             <div className='relative z-[15] overflow-clip'>
                 <div className='absolute h-full w-full -z-0 '>
-                    <img src={Design1} alt="" className='w-full h-full object-cover opacity-50' />
+                    <img src={Design1} alt="" className='w-full h-full object-cover opacity-60' />
                 </div>
                 <div className='z-10'>
                     <BouncyCards />
