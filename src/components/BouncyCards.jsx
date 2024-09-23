@@ -3,53 +3,56 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import customSoftware from '../assets/BouncyCard/CustomSoftware.png';
 import responsiveWebsite from '../assets/BouncyCard/ResponsiveWeb.png';
-import Carousel3d from "./Carousel3d";
+import userInterface from '../assets/BouncyCard/UserInterface.png';
+// import stockInventory1 from '../assets/customSoftwareImgs/stockInventory1.png'
+// import stockInventory2 from '../assets/customSoftwareImgs/stockInventory2.png'
+// import taskTracking1 from '../assets/customSoftwareImgs/taskTracking1.png'
+// import taskTracking2 from '../assets/customSoftwareImgs/taskTracking2.png'
+// import taskTracking3 from '../assets/customSoftwareImgs/taskTracking3.png'
+// import Carousel3d from "./Carousel3d";
 
 const BouncyCards = () => {
-  const cardImg = [
-    "https://picsum.photos/2100/2100",
-    "https://picsum.photos/2200/2200",
-    "https://picsum.photos/2300/2300",
-    "https://picsum.photos/2400/2400",
-    "https://picsum.photos/1900/1900",
-    "https://picsum.photos/1800/1800",
-    "https://picsum.photos/1700/1700",
-    "https://picsum.photos/1600/1600",
-    "https://picsum.photos/1500/1500",
-    "https://picsum.photos/1400/1400",
-  ];
+  // const responsiveWebsites = [
+  //   "https://picsum.photos/2100/2100",
+  //   "https://picsum.photos/2200/2200",
+  //   "https://picsum.photos/2300/2300",
+  //   "https://picsum.photos/2400/2400",
+  //   "https://picsum.photos/1900/1900",
+  //   "https://picsum.photos/1800/1800",
+  //   "https://picsum.photos/1700/1700",
+  //   "https://picsum.photos/1600/1600",
+  //   "https://picsum.photos/1500/1500",
+  //   "https://picsum.photos/1400/1400",
+  // ];
 
-  const cardImg1 = [
-    "https://picsum.photos/2000/2000",
-    "https://picsum.photos/2100/2100",
-    "https://picsum.photos/2200/2200",
-    "https://picsum.photos/2300/2300",
-    "https://picsum.photos/2400/2400",
-  ];
+  // const customSoftwares = [
+  //   stockInventory1,
+  //   stockInventory2,
+  //   taskTracking1,
+  //   taskTracking2,
+  //   taskTracking3
+  // ];
 
-  const cardImg2 = [
-    "https://picsum.photos/2500/2500",
-    "https://picsum.photos/2600/2600",
-    "https://picsum.photos/2700/2700",
-    "https://picsum.photos/2800/2800",
-    "https://picsum.photos/2900/2900",
-    "https://picsum.photos/3000/3000",
-  ];
+  // const logoAndBranding = [
+  //   "https://picsum.photos/2500/2500",
+  //   "https://picsum.photos/2600/2600",
+  //   "https://picsum.photos/2700/2700",
+  //   "https://picsum.photos/2800/2800",
+  //   "https://picsum.photos/2900/2900",
+  //   "https://picsum.photos/3000/3000",
+  // ];
 
-  const cardImg3 = [
-    "https://picsum.photos/3000/3000",
-    "https://picsum.photos/3100/3100",
-    "https://picsum.photos/3200/3200",
-  ];
+  // const userInterfaceDesigns = [
+  //   "https://picsum.photos/3000/3000",
+  //   "https://picsum.photos/3100/3100",
+  //   "https://picsum.photos/3200/3200",
+  // ];
 
-  const [images, setImages] = useState(cardImg);
+  // const [images, setImages] = useState(responsiveWebsites);
   const [selectedCard, setSelectedCard] = useState(0);
 
-  const handleSetImages = (selectedImages, index) => {
-    if (images !== selectedImages) {
-      setImages(selectedImages);
-      setSelectedCard(index);
-    }
+  const handleSetImages = (index) => {
+    setSelectedCard(index);
   };
 
   const [textRef, inView] = useInView({
@@ -81,7 +84,7 @@ const BouncyCards = () => {
         <div className="relative mb-4 grid grid-cols-12 gap-4 z-20">
           <div
             className={`col-span-12 md:col-span-4`}
-            onClick={() => handleSetImages(cardImg, 0)}
+            onClick={() => handleSetImages(0)}
           >
             <BounceCard className={`${selectedCard === 0 ? "from-violet-400 to-indigo-400" : ""}`}>
               <CardTitle>Responsive website </CardTitle>
@@ -92,7 +95,7 @@ const BouncyCards = () => {
           </div>
           <div
             className={`col-span-12 md:col-span-8`}
-            onClick={() => handleSetImages(cardImg1, 1)}
+            onClick={() => handleSetImages(1)}
           >
             <BounceCard className={`${selectedCard === 1 ? "from-amber-400 to-orange-400" : ""}`}>
               <CardTitle>Custom software</CardTitle>
@@ -102,7 +105,7 @@ const BouncyCards = () => {
             </BounceCard>
           </div>
         </div>
-        <div className='flex h-auto w-full relative z-20'>
+        {/* <div className='flex h-auto w-full relative z-20'>
           <AnimatePresence>
             {images && (
               <motion.div
@@ -113,35 +116,31 @@ const BouncyCards = () => {
                 transition={{ duration: 0.5, ease: 'easeOut' }}
                 className=' w-full relative'
               >
-                <Carousel3d images={images} />
+                <Carousel3d images={images} radius={800} duration={30} width={500} height={300} />
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </div> */}
         <div className="relative grid grid-cols-12 gap-4 z-20">
           <div
             className="col-span-12 md:col-span-6"
-            onClick={() => handleSetImages(cardImg2, 2)}
+            onClick={() => handleSetImages(2)}
           >
             <BounceCard className={`${selectedCard === 2 ? "from-green-400 to-emerald-400" : ""}`}>
               <CardTitle>Logo & branding</CardTitle>
               <div className={`${selectedCard === 2 ? "bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a]" : "bg-gradient-to-tr from-green-400 to-emerald-400"}  absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl p-4 transition-all duration-[500ms] ease-in-out group-hover:translate-y-4 group-hover:rotate-[2deg]`}>
-                <span className="block text-center font-semibold text-emerald-50">
-                  FEATURE DEMO HERE
-                </span>
+                <img src={userInterface} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg" />
               </div>
             </BounceCard>
           </div>
           <div
             className={`col-span-12 md:col-span-6`}
-            onClick={() => handleSetImages(cardImg3, 3)}
+            onClick={() => handleSetImages(3)}
           >
             <BounceCard className={`${selectedCard === 3 ? "from-pink-400 to-red-400" : ""}`}>
               <CardTitle>UI / UX designs</CardTitle>
               <div className={`${selectedCard === 3 ? "bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a]" : "bg-gradient-to-tr from-pink-400 to-red-400"}  absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl p-4 transition-all duration-[500ms] ease-in-out group-hover:translate-y-4 group-hover:rotate-[2deg]`}>
-                <span className="block text-center font-semibold text-red-50">
-                  FEATURE DEMO HERE
-                </span>
+                <img src={userInterface} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg" />
               </div>
             </BounceCard>
           </div>

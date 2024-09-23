@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import HamburgerButton from './HamburgerButton';
 import { motion } from 'framer-motion';
 import saskaLogo from '../assets/Saska.png';
+import GlowingButton from './GlowingButton';
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
@@ -50,13 +51,13 @@ const Navbar = () => {
     };
 
     return (
-        <div className='bg-slate-600 relative w-full overflow-hidden'>
+        <div className='bg-slate-600 relative w-full overflow-hidden '>
             {/* Mobile Sliding Menu */}
             <motion.div
                 variants={navVariants}
                 initial="hide"
                 animate={active ? 'show' : 'hide'}
-                className={`md:hidden h-[100vh] w-full fixed bg-neutral-950 top-0 left-0 z-[50] flex flex-col p-4 items-start justify-center 
+                className={`md:hidden h-[100vh] w-full fixed bg-neutral-950 top-0 left-0 z-[50] flex flex-col p-4 items-start justify-center  
                             ${active ? 'pointer-events-auto' : 'pointer-events-none'}`}
             >
                 {['Home', 'Services', 'Portfolio', 'FAQs', 'Contact'].map((item) => (
@@ -73,8 +74,8 @@ const Navbar = () => {
             </motion.div>
 
             {/* Navbar */}
-            <div className='w-full fixed top-0 z-[100] backdrop-blur-[2px] px-4 pt-4 pb-1'>
-                <div className='max-w-[1600px] flex flex-row justify-between mx-auto  items-center w-full'>
+            <div className='w-full fixed top-0 z-[100] backdrop-blur-[8px] pt-4 pb-1'>
+                <div className='max-w-[1600px] flex flex-row justify-between mx-auto items-center px-8'>
                     <div className='flex flex-row items-center gap-x-2'>
                         <img src={saskaLogo} alt="Logo" className='md:h-[50px] h-[40px] w-auto' />
                         <p className='text-white text-lg md:text-2xl font-semibold tracking-wide'>SASKA Solutions</p>
@@ -98,11 +99,12 @@ const Navbar = () => {
                             ))}
                             <li>
                                 <Link
-                                    to='contact'
+                                    to="contact"
                                     smooth={true}
                                     duration={600}
-                                    className='cursor-pointer relative text-white font-semibold px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300'>
-                                    Contact
+                                    className='z-10'
+                                >
+                                    <GlowingButton text="Contact Us" />
                                 </Link>
                             </li>
                         </ul>

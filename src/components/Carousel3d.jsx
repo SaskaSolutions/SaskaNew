@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Blurhash } from 'react-blurhash';
 import saska from '../assets/Saska.png'
 
-const Carousel3d = ({ images = [], radius = 500, duration = 25, width = 200, height = 250 }) => {
+const Carousel3d = ({ images = [], radius = 700, duration = 30, width = 500, height = 300 }) => {
     const totalCards = images.length;
 
     // Placeholder function to generate a Blurhash. 
@@ -23,12 +23,12 @@ const Carousel3d = ({ images = [], radius = 500, duration = 25, width = 200, hei
                     transformStyle: 'preserve-3d',
                     transform: `perspective(1000px) rotateX(-15deg)`,
                 }}
-                initial={{ rotateY: 0, rotateX: -6 }}
-                animate={{ rotateY: 360, rotateX: -6 }}
+                initial={{ rotateY: 0, rotateX: -2 }}
+                animate={{ rotateY: -360, rotateX: -2 }}
                 transition={{ duration: duration, ease: 'linear', repeat: Infinity }}
             >
                 {images.map((img, index) => {
-                    const angle = (360 / totalCards) * index;
+                    const angle = (360 / (totalCards)) * index;
                     const blurHash = generateBlurHash(img); // Use your precomputed Blurhashes here.
 
                     return (
@@ -55,16 +55,16 @@ const Carousel3d = ({ images = [], radius = 500, duration = 25, width = 200, hei
                             <img
                                 src={img}
                                 alt={`Slide ${index + 1}`}
-                                className='w-full h-full object-cover object-center rounded-lg shadow-lg absolute top-0 left-0'
+                                className='w-full h-full object-fill object-center rounded-lg shadow-lg absolute top-0 left-0'
                                 style={{ display: 'none' }} // Hide image initially
                                 onLoad={(e) => e.target.style.display = 'block'} // Show image after it loads
                             />
                         </motion.div>
                     );
                 })}
-                <div className='backdrop-blur-sm rounded-lg shadow-lg absolute p-2 bg-black bg-opacity-40 top-0 left-0 w-[250px] h-[300px]'>
+                {/* <div className='backdrop-blur-sm rounded-lg shadow-lg absolute p-2 bg-black bg-opacity-40 top-0 left-0 w-[250px] h-[300px]'>
                     <img src={saska} alt="" className='w-full h-full object-cover' />
-                </div>
+                </div> */}
             </motion.div>
         </section>
     );

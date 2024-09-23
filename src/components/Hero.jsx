@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
+import GlowingButton from './GlowingButton';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
@@ -67,7 +68,7 @@ const Hero = () => {
                                 show: { opacity: 1, y: 0 },
                                 hide: { opacity: 0, y: -50 },
                             }}
-                            className='text-center text-5xl lg:text-7xl font-bold font-DM  text-white max-w-2xl'
+                            className='text-center text-5xl lg:text-7xl font-bold font-DM max-w-2xl bg-gradient-to-t from-pink-500 via-violet-500 to-sky-500 text-transparent bg-clip-text'
                         >
                             SASKA SOLUTIONS
                         </motion.h1>
@@ -89,16 +90,9 @@ const Hero = () => {
                         >
                             We bring together our design skills and strategic thinking to craft experiences your customers will never forget.
                         </motion.h2>
-                        <motion.button
-                            className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-10 py-3 rounded-full font-medium text-lg"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            <Link to={"services"} smooth={true} duration={1500}>
-                                Get Started
-                            </Link>
-                        </motion.button>
+                        <Link to="services" spy={true} smooth={true} duration={1500}>
+                            <GlowingButton text={"Get Started"} to={"#services"} />
+                        </Link>
                     </motion.div>
 
                     {/* Slow-moving squares */}

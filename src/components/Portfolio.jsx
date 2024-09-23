@@ -1,6 +1,12 @@
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
+import stockInventory from '../assets/customSoftwareImgs/stockInventory1.png'
+import taskTracker from '../assets/customSoftwareImgs/taskTracking1.png'
+import bethmar from '../assets/customSoftwareImgs/bethmar.png'
+import listLink from '../assets/customSoftwareImgs/listLink.png'
+import portfolioThree from '../assets/customSoftwareImgs/portfolioThree.png'
+
 
 export const HoverImageLinks = () => {
     return (
@@ -8,33 +14,33 @@ export const HoverImageLinks = () => {
             <section className="max-w-[1600px] p-4 mx-auto lg:p-8 ">
                 <div className="mx-auto max-w-[1600px] ">
                     <Link
-                        heading="Bethmar.co"
+                        heading="Bethmar.co.uk"
                         subheading="A Telecom, Infrastructure and Construction Company"
-                        imgSrc="https://picsum.photos/1024/1600"
-                        href="#"
+                        imgSrc={bethmar}
+                        href="https://www.bethmar.co.uk/"
                     />
                     <Link
-                        heading="Link-List"
+                        heading="ListLinkApp.com"
                         subheading="A Web based application for Lists"
-                        imgSrc="https://picsum.photos/1200/2400"
-                        href="#"
+                        imgSrc={listLink}
+                        href="https://www.listlinkapp.com/login"
                     />
                     <Link
-                        heading="Emaan.LMS.edu"
-                        subheading="A complete Learning Management System"
-                        imgSrc="https://picsum.photos/2400/1200"
-                        href="#"
+                        heading="3D Portfolio"
+                        subheading="Personal Portfolio Website built with react and three.js"
+                        imgSrc={portfolioThree}
+                        href="https://portfolio-topaz-beta-52.vercel.app/"
                     />
                     <Link
                         heading="StockManager.com"
                         subheading="A web based stock management system"
-                        imgSrc="https://picsum.photos/1600/1024"
+                        imgSrc={stockInventory}
                         href="#"
                     />
                     <Link
                         heading="TaskTracker.init"
                         subheading="A web based task tracker"
-                        imgSrc="https://picsum.photos/1624/1224"
+                        imgSrc={taskTracker}
                         href="#"
                     />
                 </div>
@@ -74,6 +80,8 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
     return (
         <motion.a
             href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             ref={ref}
             onMouseMove={handleMouseMove}
             initial="initial"
@@ -125,7 +133,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
                 }}
                 transition={{ type: "spring" }}
                 src={imgSrc}
-                className="absolute z-0 h-24 w-32 rounded-lg object-cover md:h-48 md:w-64"
+                className="absolute z-0 h-24 w-auto rounded-lg object-cover md:h-48 md:w-auto"
                 alt={`Image representing a link for ${heading}`}
             />
 

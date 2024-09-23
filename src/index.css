@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 .radial-gradient {
   background: radial-gradient(
       circle at 50% 0%,

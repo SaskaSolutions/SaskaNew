@@ -2,6 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import TextParallax from './TextParallax'
+import customSoftware from "../assets/TextParallax/customSoftware.png";
+import webDev from "../assets/TextParallax/webDev.png";
+import graphicDesign from "../assets/TextParallax/graphicDesign.png";
 
 const Services = () => {
 
@@ -40,17 +43,17 @@ const Services = () => {
             <div className='relative max-w-[1600px] mx-auto'>
                 <div className='py-6'>
                     <TextParallax
-                        imgUrl="https://plus.unsplash.com/premium_photo-1678565546661-bf43274dd428?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        imgUrl={webDev}
                         subheading="Web Development"
                         heading="Responsive Web Design"
                     />
                     <TextParallax
-                        imgUrl="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        imgUrl={customSoftware}
                         subheading="Software Development"
                         heading="Custom Software Solutions"
                     />
                     <TextParallax
-                        imgUrl="https://images.unsplash.com/photo-1635405054100-efa6dbf09b04?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        imgUrl={graphicDesign}
                         subheading="Design"
                         heading="UI/UX & Graphic Design"
                     />

@@ -55,7 +55,7 @@ const Contact = () => {
     };
 
     return (
-        <section id='contact' className="min-h-screen bg-gradient-to-b from-5% from-black via-neutral-900 to-neutral-950 overflow-hidden text-white">
+        <section id='contact' className="min-h-screen bg-gradient-to-b from-5% from-black via-neutral-950 to-black overflow-hidden text-white">
             <div className="max-w-[1600px] p-4 mx-auto lg:p-8 flex items-center justify-center flex-col">
                 <h2 className='text-center text-5xl lg:text-7xl font-bold font-DM text-white'>
                     Connect With{' '}

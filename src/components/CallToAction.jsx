@@ -1,28 +1,53 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { motion, useMotionTemplate, animate, useMotionValue } from 'framer-motion';
+import GlowingButton from './GlowingButton';
+
+const COLORS = ["#E61919", "#0066FF", "#7F055F", "#F75590", "#E61919"];
+
 const CallToAction = () => {
+    const color = useMotionValue(COLORS[0]);
+    const backgroundImage = useMotionTemplate`radial-gradient(120% 150% at 50% 0%, #0b0b0b 50%, ${color})`
+    const border = useMotionTemplate`2px solid ${color}`
+    const boxShadow = useMotionTemplate`0 4px 24px ${color}`
+
+    useEffect(() => {
+        animate(color, COLORS, {
+            ease: "easeInOut",
+            repeat: Infinity,
+            duration: 10,
+            repeatType: "mirror",
+        }
+
+        )
+    })
     return (
-        <section className="h-screen bg-gradient-to-b from-neutral-950 to-black overflow-hidden text-white">
-            <div className="relative max-w-xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+        <motion.section
+            className="h-screen overflow-hidden text-white relative"
+            style={{
+                backgroundImage,
+            }}
+        >
+            <div className="relative h-full flex flex-col justify-center items-center text-center">
                 <h2 className="text-4xl lg:text-6xl font-bold mb-6">
                     Innovation Meets Excellence
                 </h2>
                 <p className="text-lg font-light lg:text-xl mb-4">
                     Pioneering web solutions that turn your vision into reality.
                 </p>
-                <motion.button
-                    className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-10 py-3 rounded-full font-medium text-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                >
-                    <Link to="contact" spy={true} smooth={true} duration={500}>
-                        Discover the Future with us
-                    </Link>
-                </motion.button>
+                <Link to="contact" spy={true} smooth={true} duration={500}>
+                    <motion.button
+                        style={{ boxShadow, border }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.2 }}
+                        className='px-6 py-3 rounded-full text-lg font-DM font-semibold'
+                    >
+                        Discover the future with us
+                    </motion.button>
+                </Link>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

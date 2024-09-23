@@ -43,11 +43,10 @@ const Footer = () => {
                             <div className='mb-6 md:mb-0'>
                                 <h3 className='font-semibold mb-3 text-2xl'>Our Services</h3>
                                 <ul className='text-base'>
-                                    <li>Graphic Designing</li>
-                                    <li>Web Designs</li>
-                                    {/* <li>Digital Marketing</li> */}
-                                    <li>Web Development</li>
-                                    <li>Software Development</li>
+                                    <li><a href="">Graphic Designing</a></li>
+                                    <li><a href="">Web Designs</a></li>
+                                    <li><a href="">Web Development</a></li>
+                                    <li><a href="">Software Development</a></li>
                                 </ul>
                             </div>
                             <div className='mb-6 md:mb-0'>
