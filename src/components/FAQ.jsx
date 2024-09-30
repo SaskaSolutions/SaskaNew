@@ -7,7 +7,7 @@ const faqData = [
     {
         question: "What services does SASKA Solutions offer?",
         answer:
-            "SASKA Solutions is a versatile company offering a wide range of services beyond just UI/UX design & website development in Karachi. Our expertise spans software development, digital transformation, data analytics, IT consulting and Cheap wordpress website design. We provide end-to-end solutions tailored to meet the unique needs of businesses across various industries.",
+            "SASKA Solutions is a versatile company offering a wide range of services beyond just UI/UX design & website development in Karachi. Our expertise spans software development, digital transformation, data analytics, IT consulting and cheap wordpress website design. We provide end-to-end solutions tailored to meet the unique needs of businesses across various industries.",
     },
     {
         question: "How can SASKA Solutions help my business grow?",
@@ -53,11 +53,11 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
                 transition={{ duration: 0.3 }}
             > < IoMdArrowDropdownCircle className='text-gray-400 p-2' size={50} /></motion.span>
         </button>
-        {isOpen && <motion.p
+        {isOpen && <motion.h2
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="pb-4 text-lg text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 overflow-hidden tracking-wide">{answer}</motion.p>}
+            className="pb-4 text-lg text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 overflow-hidden tracking-wide">{answer}</motion.h2>}
     </div >
 );
 

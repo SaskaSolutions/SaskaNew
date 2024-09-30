@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer'
 import customSoftware from '../assets/BouncyCard/CustomSoftware.png';
 import responsiveWebsite from '../assets/BouncyCard/ResponsiveWeb.png';
 import userInterface from '../assets/BouncyCard/UserInterface.png';
+import logoDesign from '../assets/BouncyCard/LogoDesign.png';
 // import stockInventory1 from '../assets/customSoftwareImgs/stockInventory1.png'
 // import stockInventory2 from '../assets/customSoftwareImgs/stockInventory2.png'
 // import taskTracking1 from '../assets/customSoftwareImgs/taskTracking1.png'
@@ -89,7 +90,7 @@ const BouncyCards = () => {
             <BounceCard className={`${selectedCard === 0 ? "from-violet-400 to-indigo-400" : ""}`}>
               <CardTitle>Responsive website </CardTitle>
               <div className={` ${selectedCard === 0 ? "bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a]" : "bg-gradient-to-br from-violet-400 to-indigo-400"}  absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl p-4 transition-all duration-[500ms] ease-in-out group-hover:translate-y-4 group-hover:rotate-[2deg]`}>
-                <img src={responsiveWebsite} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg" />
+                <img src={responsiveWebsite} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg aspect-auto" />
               </div>
             </BounceCard>
           </div>
@@ -100,7 +101,7 @@ const BouncyCards = () => {
             <BounceCard className={`${selectedCard === 1 ? "from-amber-400 to-orange-400" : ""}`}>
               <CardTitle>Custom software</CardTitle>
               <div className={` ${selectedCard === 1 ? "bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a]" : "bg-gradient-to-br from-amber-400 to-orange-400"}  absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl p-4 transition-all duration-[500ms] ease-in-out group-hover:translate-y-4 group-hover:rotate-[2deg]`}>
-                <img src={customSoftware} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg" />
+                <img src={customSoftware} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg aspect-auto" />
               </div>
             </BounceCard>
           </div>
@@ -129,7 +130,7 @@ const BouncyCards = () => {
             <BounceCard className={`${selectedCard === 2 ? "from-green-400 to-emerald-400" : ""}`}>
               <CardTitle>Logo & branding</CardTitle>
               <div className={`${selectedCard === 2 ? "bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a]" : "bg-gradient-to-tr from-green-400 to-emerald-400"}  absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl p-4 transition-all duration-[500ms] ease-in-out group-hover:translate-y-4 group-hover:rotate-[2deg]`}>
-                <img src={userInterface} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg" />
+                <img src={logoDesign} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg aspect-auto" />
               </div>
             </BounceCard>
           </div>
@@ -140,7 +141,7 @@ const BouncyCards = () => {
             <BounceCard className={`${selectedCard === 3 ? "from-pink-400 to-red-400" : ""}`}>
               <CardTitle>UI / UX designs</CardTitle>
               <div className={`${selectedCard === 3 ? "bg-gradient-to-t from-[#0a0a1a] to-[#0a0a0a]" : "bg-gradient-to-tr from-pink-400 to-red-400"}  absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl p-4 transition-all duration-[500ms] ease-in-out group-hover:translate-y-4 group-hover:rotate-[2deg]`}>
-                <img src={userInterface} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg" />
+                <img src={userInterface} alt="" loading="lazy" width="100%" height="100%" className="w-full h-auto object-cover rounded-lg aspect-auto" />
               </div>
             </BounceCard>
           </div>
@@ -167,6 +168,6 @@ const BounceCard = ({ className, children }) => {
 
 const CardTitle = ({ children }) => {
   return (
-    <h3 className="font-Poppins mx-auto text-center text-2xl lg:text-3xl font-semibold text-slate-200">{children}</h3>
+    <h2 className="font-Poppins mx-auto text-center text-2xl lg:text-3xl font-semibold text-slate-200">{children}</h2>
   );
 };

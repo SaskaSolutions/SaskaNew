@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -43,10 +43,10 @@ const Footer = () => {
                             <div className='mb-6 md:mb-0'>
                                 <h3 className='font-semibold mb-3 text-2xl'>Our Services</h3>
                                 <ul className='text-base'>
-                                    <li><a href="">Graphic Designing</a></li>
-                                    <li><a href="">Web Designs</a></li>
-                                    <li><a href="">Web Development</a></li>
-                                    <li><a href="">Software Development</a></li>
+                                    <li>Graphic Designing</li>
+                                    <li>Web Designs</li>
+                                    <li>Web Development</li>
+                                    <li>Software Development</li>
                                 </ul>
                             </div>
                             <div className='mb-6 md:mb-0'>
@@ -64,6 +64,7 @@ const Footer = () => {
                                     <li>SEO</li>
                                     <li>Ecommerce</li>
                                     <li>UI & UX Design</li>
+                                    <li>Web-App Development</li>
                                 </ul>
                             </div>
                         </div>

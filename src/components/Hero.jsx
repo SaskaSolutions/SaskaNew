@@ -4,6 +4,11 @@ import Lenis from '@studio-freight/lenis';
 import GlowingButton from './GlowingButton';
 import { Link } from 'react-scroll';
 
+import mobileResponsive from '../assets/BannerSvg/mobileResponsive.svg';
+import seo from '../assets/BannerSvg/seo.svg';
+import analytics from '../assets/BannerSvg/analytics.svg';
+import performance from '../assets/BannerSvg/performance.svg';
+
 const Hero = () => {
 
     useEffect(() => {
@@ -68,7 +73,7 @@ const Hero = () => {
                                 show: { opacity: 1, y: 0 },
                                 hide: { opacity: 0, y: -50 },
                             }}
-                            className='text-center text-5xl lg:text-7xl font-bold font-DM max-w-2xl bg-gradient-to-t from-pink-500 via-violet-500 to-sky-500 text-transparent bg-clip-text'
+                            className='text-center text-5xl lg:text-7xl font-bold font-DM max-w-2xl text-white'
                         >
                             SASKA SOLUTIONS
                         </motion.h1>
@@ -96,25 +101,25 @@ const Hero = () => {
                     </motion.div>
 
                     {/* Slow-moving squares */}
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[200px] h-[125px] md:w-[400px] md:h-[250px] absolute bottom-[35%] lg:bottom-[30%] right-[20%] lg:right-[10%] z-[5] opacity-60' style={{ y: slowY }} >
-                        <img src="https://plus.unsplash.com/premium_photo-1683140655656-20448abc55da?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
-                    </motion.div>
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[200px] h-[125px] md:w-[400px] md:h-[250px] absolute bottom-[50%] lg:bottom-[30%] left-[5%] z-[5] opacity-60' style={{ y: slowY }} >
+                    {/* <motion.div className='shadow-md shadow-violet-700/10 absolute bottom-[35%] lg:bottom-[30%] right-[20%] lg:right-[10%] z-[5] opacity-60' style={{ y: slowY }} >
+                        <img src={} alt="" className='h-full w-full object-center object-cover' />
+                    </motion.div> */}
+                    {/* <motion.div className='shadow-md shadow-violet-700/10 absolute bottom-[50%] lg:bottom-[30%] left-[5%] z-[5] opacity-60' style={{ y: slowY }} >
                         <img src="https://plus.unsplash.com/premium_photo-1661320832191-8e9866f34bc9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
-                    </motion.div>
+                    </motion.div> */}
 
                     {/* Fast-moving squares */}
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[300px] h-[250px] absolute bottom-[25%] right-[5%] z-[10] lg:block hidden' style={{ y: fastY }} >
-                        <img src="https://plus.unsplash.com/premium_photo-1678565202049-9e37b2da8060?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
+                    {/* <motion.div className='absolute bottom-[45%] right-[5%] z-[10] lg:block hidden' style={{ y: fastY }} >
+                        <img src={seo} alt="" className='h-full w-full object-center object-cover' />
+                    </motion.div> */}
+                    {/* <motion.div className='absolute bottom-[35%] lg:bottom-[60%] left-[7%] z-[10]' style={{ y: fastY }} >
+                        <img src={analytics} alt="" className='h-full w-full object-center object-cover' />
+                    </motion.div> */}
+                    <motion.div className='absolute bottom-[0%] right-[10%] z-[5] lg:block hidden' style={{ y: fastY }} >
+                        <img src={performance} height={200} width={200} alt="" className='h-full w-auto object-center object-cover aspect-auto' />
                     </motion.div>
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[175px] h-[100px] md:w-[350px] md:h-[200px] absolute bottom-[35%] lg:bottom-[40%] left-[7%] z-[10]' style={{ y: fastY }} >
-                        <img src="https://plus.unsplash.com/premium_photo-1663050633633-2856e875dcc7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
-                    </motion.div>
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[300px] h-[150px] absolute bottom-[5%] right-[12%] z-[10] lg:block hidden' style={{ y: fastY }} >
-                        <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
-                    </motion.div>
-                    <motion.div className='shadow-md shadow-violet-700/10 w-[250px] h-[350px] absolute bottom-[5%] left-[15%] z-[10] lg:block hidden' style={{ y: fastY }} >
-                        <img src="https://images.unsplash.com/photo-1668554245893-2430d0077217?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" className='h-full w-full object-center object-cover' />
+                    <motion.div className='absolute bottom-[25%] left-[5%] z-[5]' style={{ y: fastY }} >
+                        <img src={mobileResponsive} height={200} width={200} alt="" className='h-full w-full object-center object-cover aspect-auto' />
                     </motion.div>
                 </div>
             </div>

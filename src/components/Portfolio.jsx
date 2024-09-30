@@ -133,7 +133,9 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
                 }}
                 transition={{ type: "spring" }}
                 src={imgSrc}
-                className="absolute z-0 h-24 w-auto rounded-lg object-cover md:h-48 md:w-auto"
+                width={500}
+                height={500}
+                className="absolute z-0 h-24 w-auto rounded-lg object-cover md:h-48 md:w-auto aspect-auto"
                 alt={`Image representing a link for ${heading}`}
             />
 
