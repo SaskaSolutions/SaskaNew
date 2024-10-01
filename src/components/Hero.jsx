@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { animate, motion, useMotionTemplate, useMotionValue, useScroll, useTransform } from 'framer-motion';
 import Lenis from '@studio-freight/lenis';
 import GlowingButton from './GlowingButton';
 import { Link } from 'react-scroll';
@@ -9,6 +9,7 @@ import seo from '../assets/BannerSvg/seo.svg';
 import analytics from '../assets/BannerSvg/analytics.svg';
 import performance from '../assets/BannerSvg/performance.svg';
 
+const COLORS = ["#E61919", "#0066FF", "#7F055F", "#F75590", "#E61919"];
 const Hero = () => {
 
     useEffect(() => {
@@ -38,8 +39,22 @@ const Hero = () => {
         offset: ["start end", "end start"]
     });
 
+    const color = useMotionValue(COLORS[0]);
+    const border = useMotionTemplate`2px solid ${color}`
+    const boxShadow = useMotionTemplate`0 4px 24px ${color}`
+
+    useEffect(() => {
+        animate(color, COLORS, {
+            ease: "easeInOut",
+            repeat: Infinity,
+            duration: 10,
+            repeatType: "mirror",
+        }
+
+        )
+    })
+
     const fastY = useTransform(scrollYProgress, [0, 1], [200, -600]);
-    const slowY = useTransform(scrollYProgress, [0, 1], [-200, 300]);
     const exitScale = useTransform(scrollYProgress, [0.7, 1], [1, 0.7]);
     const exitOpacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
 
@@ -95,8 +110,16 @@ const Hero = () => {
                         >
                             We bring together our design skills and strategic thinking to craft experiences your customers will never forget.
                         </motion.h2>
-                        <Link to="services" spy={true} smooth={true} duration={1500}>
-                            <GlowingButton text={"Get Started"} to={"#services"} />
+                        <Link to="services" spy={true} smooth={true} duration={500}>
+                            <motion.button
+                                style={{ boxShadow, border }}
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                transition={{ duration: 0.2 }}
+                                className='px-6 py-3 rounded-full text-lg font-DM font-semibold text-white'
+                            >
+                                Get Started
+                            </motion.button>
                         </Link>
                     </motion.div>
 

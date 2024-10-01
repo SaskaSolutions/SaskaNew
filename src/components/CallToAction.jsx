@@ -6,7 +6,6 @@ const COLORS = ["#E61919", "#0066FF", "#7F055F", "#F75590", "#E61919"];
 
 const CallToAction = () => {
     const color = useMotionValue(COLORS[0]);
-    // const backgroundImage = useMotionTemplate`radial-gradient(120% 150% at 50% 0%, #0b0b0b 50%, ${color})`
     const border = useMotionTemplate`2px solid ${color}`
     const boxShadow = useMotionTemplate`0 4px 24px ${color}`
 
@@ -23,9 +22,6 @@ const CallToAction = () => {
     return (
         <motion.section
             className="h-screen overflow-hidden text-white relative"
-        // style={{
-        //     backgroundImage,
-        // }}
         >
             <div className="relative h-full flex flex-col justify-center items-center text-center">
                 <h2 className="text-4xl lg:text-6xl font-bold mb-6">

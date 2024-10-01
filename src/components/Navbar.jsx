@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import HamburgerButton from './HamburgerButton';
-import { motion } from 'framer-motion';
+import { animate, motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import saskaLogo from '../assets/Saska.png';
 import GlowingButton from './GlowingButton';
 
+
+const COLORS = ["#E61919", "#0066FF", "#7F055F", "#F75590", "#E61919"];
 const Navbar = () => {
     const [active, setActive] = useState(false);
 
@@ -49,6 +51,21 @@ const Navbar = () => {
             transition: { duration: 0.5, type: 'spring', stiffness: 100, damping: 20 }
         }
     };
+
+    const color = useMotionValue(COLORS[0]);
+    const border = useMotionTemplate`2px solid ${color}`
+    const boxShadow = useMotionTemplate`0 4px 24px ${color}`
+
+    useEffect(() => {
+        animate(color, COLORS, {
+            ease: "easeInOut",
+            repeat: Infinity,
+            duration: 10,
+            repeatType: "mirror",
+        }
+
+        )
+    })
 
     return (
         <div className='bg-slate-600 relative w-full overflow-hidden '>
@@ -98,13 +115,16 @@ const Navbar = () => {
                                 </li>
                             ))}
                             <li>
-                                <Link
-                                    to="contact"
-                                    smooth={true}
-                                    duration={600}
-                                    className='z-10'
-                                >
-                                    <GlowingButton text="Contact Us" />
+                                <Link to="contact" spy={true} smooth={true} duration={500}>
+                                    <motion.button
+                                        style={{ boxShadow, border }}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        transition={{ duration: 0.2 }}
+                                        className='px-6 py-3 rounded-full text-lg font-DM font-semibold text-white'
+                                    >
+                                        Contact Us
+                                    </motion.button>
                                 </Link>
                             </li>
                         </ul>
