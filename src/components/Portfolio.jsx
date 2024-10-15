@@ -6,6 +6,7 @@ import taskTracker from '../assets/customSoftwareImgs/taskTracking1.png'
 import bethmar from '../assets/customSoftwareImgs/bethmar.png'
 import listLink from '../assets/customSoftwareImgs/listLink.png'
 import portfolioThree from '../assets/customSoftwareImgs/portfolioThree.png'
+import sq_commercial from '../assets/customSoftwareImgs/SQ_Commercial.png'
 
 
 export const HoverImageLinks = () => {
@@ -29,16 +30,22 @@ export const HoverImageLinks = () => {
                         heading="3D Portfolio"
                         subheading="Personal Portfolio Website built with react and three.js"
                         imgSrc={portfolioThree}
+                        href="https://www.sqcommercial.co.uk/"
+                    />
+                    <Link
+                        heading="SQ Commercial"
+                        subheading="An Infrastructure & Construction Consultancy Firm"
+                        imgSrc={sq_commercial}
                         href="https://portfolio-topaz-beta-52.vercel.app/"
                     />
                     <Link
-                        heading="StockManager.com"
+                        heading="StockManagementApp"
                         subheading="A web based stock management system"
                         imgSrc={stockInventory}
                         href="#"
                     />
                     <Link
-                        heading="TaskTracker.init"
+                        heading="TaskTrackingApp"
                         subheading="A web based task tracker"
                         imgSrc={taskTracker}
                         href="#"
