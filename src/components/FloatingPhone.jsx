@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
-import saska from "../assets/Saska.png";
+import saska from "../assets/SaskaLogoSquare.png";
 
 const FloatingPhone = ({ submitForm }) => {
     return (

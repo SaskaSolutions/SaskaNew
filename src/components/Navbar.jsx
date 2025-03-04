@@ -94,8 +94,7 @@ const Navbar = () => {
             <div className='w-full fixed top-0 z-[100] backdrop-blur-[8px] pt-4 pb-1'>
                 <div className='max-w-[1600px] flex flex-row justify-between mx-auto items-center px-8'>
                     <div className='flex flex-row items-center gap-x-2'>
-                        <img src={saskaLogo} alt="Logo" className='md:h-[50px] h-[40px] w-auto' />
-                        <p className='text-white text-lg md:text-2xl font-semibold tracking-wide'>SASKA Solutions</p>
+                        <img src={saskaLogo} alt="Logo" className='md:h-[60px] h-[40px] w-auto' />
                     </div>
 
                     {/* Desktop Menu */}
